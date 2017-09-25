@@ -1,0 +1,55 @@
+<!--
+SeComLib
+Copyright 2012-2013 TU Delft, Information Security & Privacy Lab (http://isplab.tudelft.nl/)
+
+Contributors:
+Inald Lagendijk (R.L.Lagendijk@TUDelft.nl)
+Mihai Todor (todormihai@gmail.com)
+Thijs Veugen (P.J.M.Veugen@tudelft.nl)
+Zekeriya Erkin (z.erkin@tudelft.nl)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!--
+@file config.xml
+@brief Configuration XML file
+@details Contains all the available options of the library
+@author Mihai Todor (todormihai@gmail.com)
+-->
+<?xml version="1.0"?>
+<config>
+	<Core>
+		<Paillier>
+			<keySize>1024</keySize>
+		</Paillier>
+		<Dgk>
+			<k>1024</k><!-- Number of bits -->
+			<t>160</t><!-- Number of bits -->
+			<l>19</l><!-- the message space will be the smallest prime having more than l + 2 bits -->
+		</Dgk>
+		<RandomizerCache>
+			<capacity>100</capacity>
+		</RandomizerCache>
+	</Core>
+	<SecureFaceRecognition>
+		<a>3</a>
+		<b>4</b>
+		<!-- Bitsize of secure comparison operands -->
+		<l>20</l>
+		<BlindingFactorCache>
+			<capacity>100</capacity>
+			<!-- Security parameter for additive blinding -->
+			<kappa>40</kappa><!-- Expressed in bits -->
+		</BlindingFactorCache>
+	</SecureFaceRecognition>
+</config>
